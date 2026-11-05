@@ -1,0 +1,14 @@
+[project]
+name = "log-format-structured-interpolator-kit"
+version = "0.1.0"
+description = "Turns printf-style log format strings and their arguments into structured fields."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
