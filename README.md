@@ -54,3 +54,10 @@ Supported conversions: `%s`, `%d`, `%i`, `%f`, `%x`, `%X`, `%o`, and `%%`.
 Flags, width and precision are parsed and preserved on the segment but do
 not change interpolation semantics. Unsupported conversions raise
 `FormatError` rather than passing through silently.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
